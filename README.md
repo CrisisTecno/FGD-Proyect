@@ -1,27 +1,23 @@
-# React + TypeScript + Vite
+# Mi Página Web de Recetas y Menús
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta es una aplicación web creada con TypeScript y React que te permite explorar recetas, ingredientes, menús y gestionar tus compras de ingredientes para tus comidas.
 
-Currently, two official plugins are available:
+## Estructura de Directorios
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **src/**: Contiene todos los archivos fuente de la aplicación.
+  - **components/**: En esta carpeta se encuentran los componentes de la aplicación, incluyendo NavBar, (Aquellos componentes que afecta ala aplicacion como tal).
+  - **data/**: Puedes encontrar aquí los datos de ingredientes, recetas, menús y compras. Asegúrate de cargar estos datos desde una fuente real o simulada, como una API o un archivo JSON.
+  - **pages/**: Define las rutas de la aplicación INGREDIENTES, MENUS, RECETAS.
+  - **App.tsx**: El archivo principal que configura las rutas y Scomponentes de la aplicación.
 
-## Expanding the ESLint configuration
+## Instrucciones para Ejecutar la Aplicación
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Asegúrate de tener Node.js y npm instalados en tu sistema.
+2. Clona este repositorio o descarga los archivos en tu computadora.
+3. Abre una terminal en el directorio de la aplicación.
+4. Ejecuta el siguiente comando para instalar las dependencias:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+npm install
+npm run dev
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
